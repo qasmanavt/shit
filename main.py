@@ -3,8 +3,6 @@ from config import TOKEN
 from telegram import *
 from telegram.ext import *
 from requests import *
- 
- 
 from start import *
 from messagehandler import *
 updater = Updater(TOKEN)

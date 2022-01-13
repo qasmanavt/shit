@@ -1,10 +1,8 @@
-import imp
 from telegram import *
 from telegram.ext import *
 from requests import *
 import requests
 from datetime import datetime
-import pytz
  
 dictionary=dict()
 
