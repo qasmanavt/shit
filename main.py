@@ -54,8 +54,9 @@ def once3(context:  CallbackContext):
  
 dispatcher.add_handler(CommandHandler("start", startCommand))
 
-dispatcher.add_handler(MessageHandler(Filters.text, messageHandler))
 dispatcher.add_handler(CallbackQueryHandler(queryHandler))
+
+dispatcher.add_handler(MessageHandler(Filters.text, messageHandler))
 
 
 import datetime as dat
