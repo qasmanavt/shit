@@ -21,7 +21,7 @@ telegram_group_id="MAAB_Stand_Up"
 def messageHandler(update: Update, context: CallbackContext):
     if update.message.text!="":
         dictionary[update.effective_chat.id]=str(update.message.text)+"\n"+str(curr_date)+" " +str(curr_time)+"\n"+ str(update.effective_chat.full_name)
-    #     buttons = [[InlineKeyboardButton("Yes", callback_data="Yes")], 
+    #      buttons = [[InlineKeyboardButton("Yes", callback_data="Yes")], 
     #    [InlineKeyboardButton("No", callback_data="No")]]
     #     context.bot.send_message(chat_id=update.effective_chat.id,
     #                              reply_markup=InlineKeyboardMarkup(buttons), text="okey thanks, do you have any stucks?")
