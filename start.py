@@ -1,11 +1,20 @@
 from telegram import *
 from telegram.ext import *
 from requests import *
+from messagehandler import dictionary
  
+
+
+
 
 
 
 def startCommand(update: Update, context: CallbackContext):
     name = update.effective_chat.full_name
+    dictionary[str(update.effective_chat.id)]="id"+str(update.effective_chat.id)
     context.bot.send_message(
-        chat_id=update.effective_chat.id, text="Hi what you did yesterday")
+        chat_id=update.effective_chat.id, text="Hello welcome to my bot:)")
+
+ 
+
+ 
