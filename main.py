@@ -1,6 +1,6 @@
-import telegram
+
 from config import TOKEN
-from telegram import *
+import telegram
 from telegram.ext import *
 from requests import *
 from start import *
