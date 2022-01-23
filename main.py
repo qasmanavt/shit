@@ -75,17 +75,17 @@ def queryHandler(update: Update, context: CallbackContext):
     update.callback_query.answer("thanks")
     global order_status
 
-    if "yes" in query:
+    if "yes" == query:
        
-        must="so you did NOT forget anything from your yesterday's progress?"
-        context.bot.deleteMessage(message_id=must.message_id,chat_id=update.effective_chat.id)
+
         dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
         if dictionary["job"+str(update.effective_chat.id)]==2:
             j2.run_once(once2,0)
-    if "yes2" in query:
+    if "yes2" == query:
+        dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
         if dictionary["job"+str(update.effective_chat.id)]==3:
             j3.run_once(once3,0)
-    if "yes3" in query:
+    if "yes3" == query:
         text="[here](https://docs.google.com/spreadsheets/d/1vGBqxhKKlOjvNUVFVR0NHUerqVICYS_dwTHYjlr8qS8/edit#gid=974018585)"
         context.bot.send_message(chat_id=update.effective_chat.id, text="do not forget to write google sheet pls click here "+text,parse_mode="MarkdownV2")
         dictionary["job"+str(update.effective_chat.id)]=0
