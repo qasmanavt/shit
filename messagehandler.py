@@ -17,8 +17,8 @@ telegram_group_id="MAAB_Stand_Up"
 
 def messageHandler(update: Update, context: CallbackContext):
     if update.message.text!="":
-        if dictionary["job"+str(update.effective_chat.id)]==1:
-            a="progress from yesterday : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() - timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
+        if dictionary["job"+str(update.effective_chat.id)]=="1":
+            a="progress from yesterday : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() + timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
 
             print(dictionary)
             telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text={a}"
@@ -34,8 +34,8 @@ def messageHandler(update: Update, context: CallbackContext):
 
             print(update.message.text)
 
-        if dictionary["job"+str(update.effective_chat.id)]==2:
-            a="today's plan : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() - timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
+        if dictionary["job"+str(update.effective_chat.id)]=="2":
+            a="today's plan : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() + timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
 
             print(dictionary)
             telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text={a}"
@@ -48,8 +48,8 @@ def messageHandler(update: Update, context: CallbackContext):
             else:
                 print("error2")
 
-        if dictionary["job"+str(update.effective_chat.id)]==3:
-            a="stucks : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() - timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
+        if dictionary["job"+str(update.effective_chat.id)]=="3":
+            a="stucks : "+str(update.message.text)+"\n"+"time when he answered: "+str(datetime.now() + timedelta(hours=5))[:16]+"\n"+ "name: "+str(update.effective_chat.full_name)
 
             print(dictionary)
             telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text={a}"

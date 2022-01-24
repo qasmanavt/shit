@@ -21,7 +21,7 @@ def once(context:  CallbackContext):
         
         if users.startswith("id"):
             users=str(users[2:])
-            dictionary["job"+users]=1
+            dictionary["job"+users]="1"
             print(users)
             context.bot.send_message(chat_id=users, text=message)
 
@@ -37,7 +37,7 @@ def once2(context:  CallbackContext):
     message="what will you do today man huh?"
     for users in dictionary.values():
         
-        if users.startswith("id"):
+        if users.startswith("id") and dictionary["ans2"+str(users[2:])]=="yes":
             users=str(users[2:])
             print(users)
             context.bot.send_message(chat_id=users, text=message)
@@ -52,7 +52,7 @@ def once3(context:  CallbackContext):
     message="do you have any stucks man huh?"
     for users in dictionary.values():
         
-        if users.startswith("id"):
+        if users.startswith("id") and dictionary["ans3"+str(users[2:])]=="yes":
             users=str(users[2:])
             print(users)
             context.bot.send_message(chat_id=users, text=message)
@@ -79,14 +79,16 @@ def queryHandler(update: Update, context: CallbackContext):
        
         update.effective_message.edit_reply_markup(None)
         context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
-        dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
-        if dictionary["job"+str(update.effective_chat.id)]==2:
+        dictionary["job"+str(update.effective_chat.id)]="2"
+        dictionary["ans2"+str(update.effective_chat.id)]="yes"
+        if dictionary["job"+str(update.effective_chat.id)]=="2":
             j2.run_once(once2,0)
     if "yes2" == query:
         update.effective_message.edit_reply_markup(None)
         context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
-        dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
-        if dictionary["job"+str(update.effective_chat.id)]==3:
+        dictionary["job"+str(update.effective_chat.id)]="3"
+        dictionary["ans3"+str(update.effective_chat.id)]="yes"
+        if dictionary["job"+str(update.effective_chat.id)]=="3":
             j3.run_once(once3,0)
     if "yes3" == query:
         update.effective_message.edit_reply_markup(None)
