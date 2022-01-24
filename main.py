@@ -77,19 +77,26 @@ def queryHandler(update: Update, context: CallbackContext):
 
     if "yes" == query:
        
-
+        update.effective_message.edit_reply_markup(None)
+        context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
         dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
         if dictionary["job"+str(update.effective_chat.id)]==2:
             j2.run_once(once2,0)
     if "yes2" == query:
+        update.effective_message.edit_reply_markup(None)
+        context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
         dictionary["job"+str(update.effective_chat.id)]=dictionary["job"+str(update.effective_chat.id)]+1
         if dictionary["job"+str(update.effective_chat.id)]==3:
             j3.run_once(once3,0)
     if "yes3" == query:
+        update.effective_message.edit_reply_markup(None)
+        context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
         text="[here](https://docs.google.com/spreadsheets/d/1vGBqxhKKlOjvNUVFVR0NHUerqVICYS_dwTHYjlr8qS8/edit#gid=974018585)"
         context.bot.send_message(chat_id=update.effective_chat.id, text="do not forget to write google sheet pls click here "+text,parse_mode="MarkdownV2")
         dictionary["job"+str(update.effective_chat.id)]=0
     if "no" in query:
+        update.effective_message.edit_reply_markup(None)
+        context.bot.deleteMessage(chat_id=update.effective_chat.id, message_id=dictionary["delete"+str(update.effective_chat.id)])
         context.bot.send_message(chat_id=update.effective_chat.id, text="what are you doing write faster!!!")
 
 
