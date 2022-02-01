@@ -16,7 +16,7 @@ def startCommand(update: Update, context: CallbackContext):
     dictionary["progress"+str(update.effective_chat.id)]="progress from yesterday 📅:"
     dictionary["plan"+str(update.effective_chat.id)]="today's plan 📝:"
     dictionary["stuck"+str(update.effective_chat.id)]="stucks 🥵:"
-    dictionary["job"+str(update.effective_chat.id)]="0"
+    dictionary["job"+str(update.effective_chat.id)]=""
     dictionary["time"+str(update.effective_chat.id)]="time when he answered🕒:"
     dictionary["phone"+str(update.effective_chat.id)]=""
  

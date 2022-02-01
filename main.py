@@ -4,6 +4,7 @@ from telegram.ext import *
 from requests import *
 from start import *
 from messagehandler import *
+from getcontact import *
  
 
 
@@ -30,7 +31,7 @@ import datetime as dat
 # -5 hour from my time zone
 # heroku time zone is -10.5 hour from us
 # bot and heroku and my timezone -5
-j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=13, minute=43, second=00))
+j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=18, minute=30, second=00))
  
 
 def queryHandler(update: Update, context: CallbackContext):
@@ -83,9 +84,9 @@ def queryHandler(update: Update, context: CallbackContext):
 
 
 dispatcher.add_handler(CommandHandler("start", startCommand))
-dispatcher.add_handler(MessageHandler(Filters.contact, messageHandler))
+dispatcher.add_handler(MessageHandler(Filters.contact, getContact))
 dispatcher.add_handler(CallbackQueryHandler(queryHandler))
-
 dispatcher.add_handler(MessageHandler(Filters.text, messageHandler))
+
 updater.start_polling()
 updater.idle()
