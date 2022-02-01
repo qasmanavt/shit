@@ -31,11 +31,10 @@ import datetime as dat
 # -5 hour from my time zone
 # heroku time zone is -10.5 hour from us
 # bot and heroku and my timezone -5
-<<<<<<< HEAD
-j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=18, minute=30, second=00))
-=======
-j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=17, minute=13, second=00))
->>>>>>> 22dc60b2ccb2671b248d48012283b240ac005a3c
+
+j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=18, minute=35, second=00))
+
+
  
 
 def queryHandler(update: Update, context: CallbackContext):
