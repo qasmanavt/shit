@@ -69,7 +69,7 @@ def messageHandler(update: Update, context: CallbackContext):
         # print(update.message.text)
     
 
-    elif dictionary["job"+str(update.effective_chat.id)]=="0":
+    if dictionary["job"+str(update.effective_chat.id)]=="0":
         context.bot.send_message(chat_id=update.effective_chat.id,text="It is not time yet!!!")
     
     
