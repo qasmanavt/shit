@@ -32,7 +32,7 @@ import datetime as dat
 # heroku time zone is -10.5 hour from us
 # bot and heroku and my timezone -5
 
-j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=18, minute=35, second=00))
+j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=15, minute=35, second=00))
 
 
  
