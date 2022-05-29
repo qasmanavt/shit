@@ -12,7 +12,7 @@ from telegram.ext import *
 updater = Updater(TOKEN)
 dispatcher = updater.dispatcher
 bot = telegram.Bot(TOKEN)
-telegram_group_id="MAAB_Stand_Up"
+telegram_group_id="gufghiufgb"
 j=updater.job_queue
 def once(context:  CallbackContext):
  
