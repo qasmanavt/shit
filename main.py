@@ -16,7 +16,7 @@ telegram_group_id="gufghiufgb"
 j=updater.job_queue
 def once(context:  CallbackContext):
  
-    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=bolam atmaka ishing yqomi indi sani"
+    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=bolam atmaka ishing yqomi indi sani shitni yaz"
     tel_resp=requests.get(telegram_api_url)
        
     if tel_resp.status_code==200:
@@ -29,7 +29,7 @@ import datetime as dat
 # heroku time zone is -10.5 hour from us
 # bot and heroku and my timezone -5
 
-j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=21, minute=2, second=00))
+j.run_daily(once, days=(0, 1, 2, 3, 4, 5, 6), time=dat.time(hour=14, minute=5, second=00))
 
 updater.start_polling()
 updater.idle()
