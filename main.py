@@ -36,7 +36,7 @@ def once2(context:  CallbackContext):
 
 def once3(context:  CallbackContext):
  
-    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=uxlamasdan aldin 10 sek getmidi siyp galip shitnam doldrp yat :)"
+    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=uxlamasdan aldin 10 sek getmidi shitni doldrp yat :)"
     tel_resp=requests.get(telegram_api_url)
        
     if tel_resp.status_code==200:
