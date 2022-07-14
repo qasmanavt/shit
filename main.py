@@ -16,7 +16,7 @@ telegram_group_id="gufghiufgb"
 j=updater.job_queue
 def once(context:  CallbackContext):
  
-    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=ozingnan bilp yazsang bomimi shitni yo man har safar aytishim kkmiya indi?"
+    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=sheeeeeeeeeeeeeeeeeeeeeeeet"
     tel_resp=requests.get(telegram_api_url)
        
     if tel_resp.status_code==200:
@@ -26,7 +26,7 @@ def once(context:  CallbackContext):
 
 def once2(context:  CallbackContext):
  
-    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=yaddan chiqqanla uchun yenam 1 marta aytaman shitni yazinglaa!"
+    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=agaaain sheet"
     tel_resp=requests.get(telegram_api_url)
        
     if tel_resp.status_code==200:
@@ -36,7 +36,7 @@ def once2(context:  CallbackContext):
 
 def once3(context:  CallbackContext):
  
-    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=uxlamasdan aldin 10 sek getmidi shitni doldrp yat :)"
+    telegram_api_url=f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id=@{telegram_group_id}&text=oyliq manga kkmi ya sangami?"
     tel_resp=requests.get(telegram_api_url)
        
     if tel_resp.status_code==200:
